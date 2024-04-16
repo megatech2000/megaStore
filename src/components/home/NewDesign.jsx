@@ -1,5 +1,3 @@
-import { IoVolumeHighOutline } from "react-icons/io5";
-
 const NewDesign = ({ Image, data }) => {
   return (
     <section className="margin-top rounded-2xl bg-[#000]">
