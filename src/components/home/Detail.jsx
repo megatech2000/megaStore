@@ -19,7 +19,7 @@ const Detail = ({ Image }) => {
             Elegance in <br />
             every detail
           </h1>
-          <p className="max-w-[300px] md:max-w-[500px] text-white text-base py-3 md:py-10">
+          <p className="max-w-[300px] md:max-w-[500px] text-white text-sm py-3 md:py-10">
             Lorem ipsum dolor sit amet consectetur platea nec ut augue
             sollicitudin a sagittis vel suscipit amet lacus adipiscing.
           </p>
