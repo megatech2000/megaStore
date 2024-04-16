@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .section-width {
+    @apply md:w-5/6  mx-auto p-4 items-center;
+  }
+  .section-padding {
+    @apply py-14 md:py-20  lg:py-24;
+  }
+  .padding-top {
+    @apply pt-14 md:pt-20  lg:pt-24;
+  }
+  .padding-bottom {
+    @apply pb-14 md:pb-20  lg:pb-24;
+  }
+  .margin-top {
+    @apply mt-14 md:mt-20  lg:mt-24;
+  }
+  .margin-bottom {
+    @apply mb-14 md:mb-20  lg:mb-24;
+  }
+  .btn-primary {
+    @apply py-2.5 px-10 bg-[#117DFA] text-white font-medium rounded-lg shadow-md hover:bg-[#117DFA] focus:outline-none focus:ring focus:ring-[#117DFA] focus:ring-opacity-75;
+  }
+  .btn-secondary {
+    @apply py-2.5 px-10 bg-primary-blue text-white font-medium rounded-lg shadow-md hover:bg-primary-violet;
+  }
+  .btn-black {
+    @apply bg-white text-black rounded-full py-1.5 px-6 flex items-center gap-4 mx-auto  text-sm md:text-base 2xl:text-lg;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply xl:text-6xl lg:text-5xl md:text-4xl text-white text-3xl font-medium text-center md:leading-tight xl:leading-tight lg:leading-tight mb-10;
+  }
+  h2 {
+    @apply text-black   xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-semibold leading-tight mb-4;
+  }
+  h3 {
+    @apply text-black   xl:text-4xl lg:text-3xl md:text-3xl text-xl font-semibold leading-tight mb-4;
+  }
+  h4 {
+    @apply text-black   xl:text-3xl lg:text-3xl md:text-3xl text-xl font-semibold leading-tight mb-4;
+  }
+  h5 {
+    @apply text-black   md:text-2xl     text-xl font-semibold leading-tight mb-3;
+  }
+  h6 {
+    @apply text-black   md:text-xl     text-lg font-semibold leading-tight mb-2;
+  }
+  p {
+    @apply xl:text-lg   md:text-base text-sm  text-[#383838];
+  }
+}
+body {
+  scroll-behavior: smooth;
+}
+
+.menu-scroll {
+  transition: all 500ms;
+}
+.btn-style {
+  transition: all 500ms;
+}
+.btn-style:hover {
+  transform: scale(1.1);
+}
+.btn-hover {
+  transition: all 400ms;
+}
+.btn-hover:hover {
+  color: #a19e9e;
+}
+.scroll {
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+.navbar-text-hover:hover {
+  color: #dcdada;
+}
