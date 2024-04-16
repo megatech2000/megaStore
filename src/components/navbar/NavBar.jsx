@@ -33,18 +33,20 @@ const NavBar = () => {
 
   return (
     <section className="absolute top-0 w-full z-[10000]">
-      <div className="section-width ">
-        <div className="flex items-center justify-between  ">
+      <div className="section-width">
+        <div className="flex items-center justify-between">
           <div>
-            <h3 className="font-bold text-white 2xl:text-4xl">MegaKart.</h3>
+            <h3 className="font-bold text-white 2xl:text-4xl mb-0">
+              MegaKart.
+            </h3>
           </div>
           <div
-            className={`menu-scroll md:flex items-center  gap-7 absolute top-[70px]   md:static bg-[#323131] md:bg-transparent  rounded-r-2xl md:rounded-none
+            className={`menu-scroll md:flex items-center   gap-7 absolute top-[70px]   md:static bg-[#323131] md:bg-transparent  rounded-r-2xl md:rounded-none
           ${isOpen ? "left-0" : "left-[-100%]"} `}
           >
             {navBarData.map((item, i) => (
               <p
-                className="text-white  pt-5 px-20 md:px-0 md:pt-0 2xl:text-xl font-semibold navbar-text-hover"
+                className="text-white  pt-5  px-20 md:px-0 md:pt-0 2xl:text-xl font-semibold navbar-text-hover"
                 onClick={closeMenu}
               >
                 <Link href={item.path} key={i}>
@@ -56,14 +58,14 @@ const NavBar = () => {
               <p className="text-white 2xl:text-2xl">Cart(0)</p>
             </div>
             <div className="hidden md:block">
-              <button className="w-32  py-2 2xl:w-40 2xl:py-3 bg-[#fff] text-black rounded-full btn-style">
+              <button className="w-32 py-2 2xl:w-40 2xl:py-3 bg-[#fff] text-black rounded-full btn-style">
                 Order now
               </button>
             </div>
           </div>
 
           <div className="flex items-center gap-7 md:hidden">
-            <button className="px-8 py-2 bg-[#fff] text-black rounded-full hover:bg-[#d6d6d6]">
+            <button className="px-5 py-1 md:px-8 md:py-2 bg-[#fff] text-black rounded-full hover:bg-[#d6d6d6]">
               Order now
             </button>
             <div className="text-white">

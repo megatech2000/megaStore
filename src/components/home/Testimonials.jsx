@@ -29,7 +29,7 @@ const Testimonials = ({ Image, data }) => {
         </div>
 
         <Swiper
-          slidesPerView={3}
+          slidesPerView={1}
           spaceBetween={10}
           loop={true}
           centeredSlides={true}
@@ -38,16 +38,23 @@ const Testimonials = ({ Image, data }) => {
             disableOnInteraction: false,
             loop: true,
           }}
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 10,
+            },
+          }}
           modules={[Autoplay]}
           wrapperClassName="mySwiper"
         >
           {data.map((item, i) => (
             <SwiperSlide>
-              <div className="flex gap-5 pt-10">
-                <div
-                  className="bg-[#eceaea] rounded-2xl w-[500px] p-10"
-                  key={i}
-                >
+              <div className="flex  gap-5 pt-10 px-5">
+                <div className="bg-[#eceaea] rounded-2xl w-full p-10" key={i}>
                   <div className="flex gap-7 items-center">
                     <Image
                       className="w-14"
