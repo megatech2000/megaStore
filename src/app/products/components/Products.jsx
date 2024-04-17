@@ -16,7 +16,7 @@ const Products = ({ Image }) => {
             <h5 className="text-black mb-0 py-5 font-bold">
               Wireless keyboard
             </h5>
-            <p className="text-black text-base">
+            <p className="text-black text-sm md:text-base">
               Lorem ipsum dolor sit amet consectetur tellus tellus sit posuere
               arcu massa et
             </p>
