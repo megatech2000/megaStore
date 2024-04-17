@@ -68,9 +68,11 @@ const NewDesign = ({ Image, data }) => {
         </div>
         <div className="text-white text-center pt-20">
           <div className="flex flex-col md:flex-row items-center justify-center gap-5">
-            <button className="w-32  py-2 bg-[#fff] text-black rounded-full btn-style">
-              Order now
-            </button>
+            <a href="/products">
+              <button className="w-32  py-2 bg-[#fff] text-black rounded-full btn-style">
+                Order now
+              </button>
+            </a>
             <button className="px-10 py-2 text-white border rounded-full btn-style">
               Browse all features
             </button>

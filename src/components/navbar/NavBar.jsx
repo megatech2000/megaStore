@@ -36,9 +36,11 @@ const NavBar = () => {
       <div className="section-width">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="font-bold text-white 2xl:text-4xl mb-0">
-              MegaKart.
-            </h3>
+            <a href="/">
+              <h3 className="font-bold text-white 2xl:text-4xl mb-0">
+                MegaKart.
+              </h3>
+            </a>
           </div>
           <div
             className={`menu-scroll md:flex items-center   gap-7 absolute top-[70px]   md:static bg-[#323131] md:bg-transparent  rounded-r-2xl md:rounded-none
@@ -58,16 +60,20 @@ const NavBar = () => {
               <p className="text-white 2xl:text-2xl">Cart(0)</p>
             </div>
             <div className="hidden md:block">
-              <button className="w-32 py-2 2xl:w-40 2xl:py-3 bg-[#fff] text-black rounded-full btn-style">
-                Order now
-              </button>
+              <a href="/products">
+                <button className="w-32 py-2 2xl:w-40 2xl:py-3 bg-[#fff] text-black rounded-full btn-style cursor-pointer">
+                  Order now
+                </button>
+              </a>
             </div>
           </div>
 
           <div className="flex items-center gap-7 md:hidden">
-            <button className="px-5 py-1 md:px-8 md:py-2 bg-[#fff] text-black rounded-full hover:bg-[#d6d6d6]">
-              Order now
-            </button>
+            <a href="/products">
+              <button className="px-5 py-1 md:px-8 md:py-2 bg-[#fff] text-black rounded-full hover:bg-[#d6d6d6]">
+                Order now
+              </button>
+            </a>
             <div className="text-white">
               <div className="text-2xl cursor-pointer">
                 {isOpen ? (

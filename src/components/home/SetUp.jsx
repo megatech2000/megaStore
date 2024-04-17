@@ -23,9 +23,11 @@ const SetUp = ({ Image }) => {
                 sollicitudin a sagittis vel suscipit amet lacus adipiscing eget
                 vitae neque.
               </p>
-              <button className="w-32  py-2 bg-[#000] text-white rounded-full btn-style">
-                Order now
-              </button>
+              <a href="/products">
+                <button className="w-32  py-2 bg-[#000] text-white rounded-full btn-style">
+                  Order now
+                </button>
+              </a>
             </div>
           </div>
         </div>

@@ -84,3 +84,12 @@ body {
 .navbar-text-hover:hover {
   color: #dcdada;
 }
+.image-zoom:hover {
+  transform: scale(1.2);
+}
+.image-zoom {
+  transition: all 500ms;
+}
+.bg-hover {
+  transition: all 500ms;
+}

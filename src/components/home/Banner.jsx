@@ -30,9 +30,11 @@ const Banner = ({ Image }) => {
             </p>
           </div>
           <div className="pt-5 md:pt-10 flex gap-10 items-center justify-center ">
-            <button className="px-6 py-2 bg-[#fff] text-black rounded-full btn-style">
-              Order now
-            </button>
+            <a href="/products">
+              <button className="px-6 py-2 bg-[#fff] text-black rounded-full btn-style">
+                Order now
+              </button>
+            </a>
             <button className="text-white text-md md:text-2xl flex items-center gap-5 btn-hover">
               <div className="text-sm md:text-4xl ">
                 <TbPlayerPlay />

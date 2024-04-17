@@ -78,9 +78,11 @@ const Testimonials = ({ Image, data }) => {
         </Swiper>
 
         <div className="text-center py-10">
-          <button className="px-6 py-2 bg-[#000] text-white rounded-full btn-style">
-            Order now
-          </button>
+          <a href="/products">
+            <button className="px-6 py-2 bg-[#000] text-white rounded-full btn-style">
+              Order now
+            </button>
+          </a>
         </div>
       </section>
     </>
