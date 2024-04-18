@@ -1,35 +1,17 @@
 "use client";
 
+import React, { useState } from "react";
 import Link from "next/link";
 import { navBarData } from "./data";
-import { HiMiniBars2 } from "react-icons/hi2";
-import { IoCloseOutline } from "react-icons/io5";
-import { useState, useEffect } from "react";
+import { HiBars3BottomRight } from "react-icons/hi2";
+import { IoMdClose } from "react-icons/io";
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsMenuOpen(!isMenuOpen);
   };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 768) {
-        setIsOpen(false);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <section className="absolute top-0 w-full z-[10000]">
@@ -43,46 +25,49 @@ const NavBar = () => {
             </a>
           </div>
           <div
-            className={`menu-scroll md:flex items-center   gap-7 absolute top-[70px]   md:static bg-[#323131] md:bg-transparent  rounded-r-2xl md:rounded-none
-          ${isOpen ? "left-0" : "left-[-100%]"} `}
+            className={`menu-scroll md:flex items-center justify-end gap-7 absolute top-[70px] left-0 w-full md:static bg-[#fff] md:bg-transparent px-5 ${
+              isMenuOpen ? "" : "hidden"
+            }`}
           >
             {navBarData.map((item, i) => (
               <p
-                className="text-white  pt-5  px-20 md:px-0 md:pt-0 2xl:text-xl font-semibold navbar-text-hover"
-                onClick={closeMenu}
+                className="text-black md:text-white 2xl:text-xl font-light pt-3 md:pt-0"
+                key={i}
               >
-                <Link href={item.path} key={i}>
-                  {item.title}
-                </Link>
+                <Link href={item.path}>{item.title}</Link>
               </p>
             ))}
-            <div className="pt-5 pb-5 md:pb-0  md:pt-0 px-20 md:px-0">
+            <div className="hidden md:block cursor-pointer">
               <p className="text-white 2xl:text-2xl">Cart(0)</p>
             </div>
-            <div className="hidden md:block">
+            <div className="pt-3 pb-3">
               <a href="/products">
-                <button className="w-32 py-2 2xl:w-40 2xl:py-3 bg-[#fff] text-black rounded-full btn-style cursor-pointer">
+                <button className="w-full py-1 md:w-36  2xl:w-40 2xl:py-3 bg-[#000] md:bg-[#fff] text-[#fff] md:text-black rounded-full btn-style cursor-pointer">
                   Order now
                 </button>
               </a>
             </div>
           </div>
-
-          <div className="flex items-center gap-7 md:hidden">
-            <a href="/products">
-              <button className="px-5 py-1 md:px-8 md:py-2 bg-[#fff] text-black rounded-full hover:bg-[#d6d6d6]">
-                Order now
-              </button>
-            </a>
-            <div className="text-white">
-              <div className="text-2xl cursor-pointer">
-                {isOpen ? (
-                  <IoCloseOutline onClick={toggleMenu} />
-                ) : (
-                  <HiMiniBars2 onClick={toggleMenu} />
-                )}
-              </div>
+          <div className="flex items-center gap-5">
+            <div className="md:hidden cursor-pointer">
+              <p className="text-white 2xl:text-2xl">Cart(0)</p>
             </div>
+            {!isMenuOpen && (
+              <div
+                className="text-white text-3xl md:hidden flex items-center gap-5 cursor-pointer"
+                onClick={toggleMenu}
+              >
+                <HiBars3BottomRight />
+              </div>
+            )}
+            {isMenuOpen && (
+              <div
+                className="text-white text-3xl md:hidden flex items-center gap-5 cursor-pointer"
+                onClick={toggleMenu}
+              >
+                <IoMdClose />
+              </div>
+            )}
           </div>
         </div>
       </div>

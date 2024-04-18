@@ -16,13 +16,13 @@ const Future = ({ Image }) => {
           </div>
         </div>
         <div className="basis-1/2  flex items-end justify-start pt-10 md:pt-0 md:justify-end">
-          <div className=" flex gap-10 items-center justify-center ">
+          <div className="sm:flex gap-10 items-center justify-center">
             <a href="/products">
-              <button className="px-6 py-2 bg-[#000] text-white rounded-full btn-style">
+              <button className="w-full md:px-6 py-2 bg-[#000] text-white rounded-full btn-style">
                 Order now
               </button>
             </a>
-            <button className="text-black text-md md:text-2xl flex items-center gap-5 btn-hover">
+            <button className="text-black text-md md:text-2xl flex items-center gap-5 btn-hover pt-5 md:pt-0">
               <div className="text-sm text-black md:text-4xl">
                 <TbPlayerPlay />
               </div>

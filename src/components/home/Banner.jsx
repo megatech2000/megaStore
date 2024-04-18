@@ -29,18 +29,20 @@ const Banner = ({ Image }) => {
               faucibus.
             </p>
           </div>
-          <div className="pt-5 md:pt-10 flex gap-10 items-center justify-center ">
+          <div className="pt-5 md:pt-10 sm:flex gap-10 items-center justify-center px-5 md:px-0">
             <a href="/products">
-              <button className="px-6 py-2 bg-[#fff] text-black rounded-full btn-style">
+              <button className="w-full md:px-6 py-2 bg-[#fff] text-black rounded-full btn-style">
                 Order now
               </button>
             </a>
-            <button className="text-white text-md md:text-2xl flex items-center gap-5 btn-hover">
-              <div className="text-sm md:text-4xl ">
-                <TbPlayerPlay />
-              </div>
-              Watch Video
-            </button>
+            <div className="flex  items-center justify-center pt-5 md:pt-0">
+              <button className="text-white text-xl md:text-2xl flex items-center gap-5 btn-hover">
+                <div className="text-sm md:text-4xl ">
+                  <TbPlayerPlay />
+                </div>
+                Watch Video
+              </button>
+            </div>
           </div>
         </div>
       </div>

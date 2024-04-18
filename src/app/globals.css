@@ -93,3 +93,6 @@ body {
 .bg-hover {
   transition: all 500ms;
 }
+.menu-scroll {
+  transition: max-height 0.3s ease-in-out;
+}
