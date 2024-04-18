@@ -22,7 +22,7 @@ const Future = ({ Image }) => {
                 Order now
               </button>
             </a>
-            <button className="text-black text-md md:text-2xl flex items-center gap-5 btn-hover pt-5 md:pt-0">
+            <button className="text-black text-md md:text-2xl flex items-center  gap-5 btn-hover pt-5 md:pt-0">
               <div className="text-sm text-black md:text-4xl">
                 <TbPlayerPlay />
               </div>

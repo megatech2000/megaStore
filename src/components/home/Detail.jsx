@@ -4,9 +4,9 @@ const Detail = ({ Image }) => {
   return (
     <section className="relative">
       <div>
-        <div className="h-full w-full">
+        <div className="h-[50vh] md:h-full w-full ">
           <Image
-            className="w-full h-full rounded-xl "
+            className="w-full h-full rounded-xl"
             src="/images/home/detail-bg-img.jpg"
             alt=""
             width={2000}
@@ -19,17 +19,17 @@ const Detail = ({ Image }) => {
             Elegance in <br />
             every detail
           </h1>
-          <p className="max-w-[300px] md:max-w-[500px] text-white text-sm py-3 md:py-10">
+          <p className="max-w-[300px] md:max-w-[500px] text-white text-sm py-5 md:py-10">
             Lorem ipsum dolor sit amet consectetur platea nec ut augue
             sollicitudin a sagittis vel suscipit amet lacus adipiscing.
           </p>
-          <div className=" flex gap-10 items-center justify-center ">
+          <div className="md:flex gap-10 items-center justify-center">
             <a href="/products">
-              <button className="px-4 py-1 md:px-6 md:py-2 bg-[#fff] text-black rounded-full btn-style">
+              <button className="px-4 py-1 md:px-6 md:py-2 bg-[#fff] text-black rounded-full btn-style mb-5 md:mb-0">
                 Order now
               </button>
             </a>
-            <button className="text-white text-md md:text-2xl flex items-center gap-5 btn-hover">
+            <button className="text-white text-md md:text-2xl flex items-center gap-5 btn-hover ">
               <div className="text-sm md:text-4xl ">
                 <TbPlayerPlay />
               </div>

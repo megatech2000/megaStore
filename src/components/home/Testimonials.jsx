@@ -68,7 +68,7 @@ const Testimonials = ({ Image, data }) => {
                       {item.title2}
                     </p>
                   </div>
-                  <div className="pt-10 font-bold h-[100px]">
+                  <div className="pt-10 font-bold h-[120px]">
                     <p>{item.desc}</p>
                   </div>
                 </div>
