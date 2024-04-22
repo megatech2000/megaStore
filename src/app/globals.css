@@ -96,3 +96,6 @@ body {
 .menu-scroll {
   transition: max-height 0.3s ease-in-out;
 }
+.scale-zoom {
+  transition: all 500ms;
+}

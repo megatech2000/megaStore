@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import { bannerData } from "../data";
 
 const Banner = dynamic(() => import("../[slug]/components/Banner"));
 const Description = dynamic(() => import("./components/Description"));
@@ -9,7 +10,7 @@ const detailPage = () => {
   return (
     <div>
       <div>
-        <Banner />
+        <Banner data={bannerData} />
         <Description />
         <MoreProducts Image={Image} />
       </div>
