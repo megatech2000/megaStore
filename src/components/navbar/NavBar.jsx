@@ -59,7 +59,10 @@ const NavBar = () => {
               </div>
             </div>
             <div className="flex items-center gap-5">
-              <div className="md:hidden cursor-pointer">
+              <div
+                className="md:hidden cursor-pointer"
+                onClick={handleCartClick}
+              >
                 <p className="text-white 2xl:text-2xl">Cart(0)</p>
               </div>
               {!isMenuOpen && (
@@ -83,7 +86,7 @@ const NavBar = () => {
         </div>
       </section>
       {isCartOpen && (
-        <section className="flex items-center justify-center scale-zoom">
+        <section className="flex items-center justify-center scale-zoom ">
           <div className="bg-[#fff] absolute top-[20%] z-50 p-10 rounded-2xl mx-5 md:mx-0 ">
             <div className="w-full pb-5">
               <div className="flex justify-between items-center">
@@ -98,7 +101,7 @@ const NavBar = () => {
             </div>
             <hr />
             {/* product 1 */}
-            <div className="flex gap-10 sm:gap-36 md:gap-56 items-center justify-between py-10">
+            <div className="sm:flex gap-10 sm:gap-36 md:gap-56 items-center justify-between py-10">
               <div className="flex gap-10 items-center ">
                 <div className="w-20 h-20 bg-[#000] rounded-xl">
                   <Image

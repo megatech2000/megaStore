@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 
-const Banner = () => {
+const Banner = ({ product }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -19,8 +19,8 @@ const Banner = () => {
           <div className=" w-full md:p-5">
             <div className="bg-[#161616] rounded-2xl flex items-center justify-center">
               <Image
-                className="w-full "
-                src="/images/products/product-1.png"
+                className="w-full"
+                src={product.image}
                 alt=""
                 width={1000}
                 height={1000}
@@ -31,7 +31,7 @@ const Banner = () => {
             <div className="basis-[100%] rounded-2xl bg-[#161616]">
               <Image
                 className="w-full"
-                src="/images/products/product-1.png"
+                src={product.image}
                 alt=""
                 width={1000}
                 height={1000}
@@ -40,7 +40,7 @@ const Banner = () => {
             <div className="basis-[100%] bg-[#161616] rounded-2xl">
               <Image
                 className="w-full"
-                src="/images/products/product-1.png"
+                src={product.image}
                 alt=""
                 width={1000}
                 height={1000}
@@ -49,7 +49,7 @@ const Banner = () => {
             <div className="basis-[100%] bg-[#161616] rounded-2xl">
               <Image
                 className="w-full "
-                src="/images/products/product-1.png"
+                src={product.image}
                 alt=""
                 width={1000}
                 height={1000}
@@ -60,13 +60,12 @@ const Banner = () => {
         <div className="basis-1/2  h-full md:px-10 order-3">
           <div className="">
             <h1 className="mb-0 text-left font-extrabold text-white">
-              Wireless keyboard
+              {product.title}
             </h1>
-            <p className="py-5 text-white">
-              Lorem ipsum dolor sit amet consectetur tellus tellus sit posuere
-              arcu massa et nunc sed in blandit sed.
-            </p>
-            <h2 className="mb-0 font-extrabold text-white">$ 49.99 USD</h2>
+            <p className="py-5 text-white">{product.desc}</p>
+            <h2 className="mb-0 font-extrabold text-white">
+              $ {product.price} USD
+            </h2>
           </div>
           <div className="flex items-center gap-5 pt-5">
             <div className="basis-[30%] ">
